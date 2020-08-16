@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock | Vanilla JS</title>
+  <script src="https://kit.fontawesome.com/ccc0ec0309.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<audio id="beep" muted=false>
+  <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+</audio>
+
+<div id="container">
+  <div id="header-container">
+    <div id="session-container" class="head-container">
+      <div id="session-label" class="head-label">Session Time</div>
+      <div id="session-controls" class="head-controls">
+        <button id="session-decrement" class="btn decrement" onClick="sessionCounter()"><i class="fas fa-minus"></i></button>
+        <div id="session-length" class="length">25</div>
+        <button id="session-increment" class="btn increment" onClick="sessionCounter()"><i class=" fas fa-plus"></i></button>
+      </div>
+    </div>
+    <div id="break-container" class="head-container">
+      <div id="break-label" class="head-label">Break Time</div>
+      <div id="break-controls" class="head-controls">
+        <button id="break-decrement" class="btn decrement" onClick="breakCounter()"><i class="fas fa-minus"></i></button>
+        <div id="break-length" class="length">5</div>
+        <button id="break-increment" class="btn increment" onClick="breakCounter()"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id="timer-container">
+    <div id="timer-circle">
+      <div id="timer-label" class="label"></div>
+      <div id="time-left">25:00</div>
+      <div id="timer-icon"></div>
+    </div>
+  </div>
+  <div id="footer-container">
+    <div id="footer-controls">
+      <button id="start_stop" class="btn btn-control" onClick="pomodoro(sessionMinutes, breakMinutes)"><i class="fas fa-play"></i></button>
+      <button id="mute_unmute" class="btn btn-control" onClick="muteUnmute()"><i class="fas fa-volume-up"></i></button>
+      <button id="reset" class="btn btn-control" onClick="resetTimer()"><i class="fas fa-undo-alt"></i></button>
+    </div>
+    <form id="footer-form" action="javascript:void(0);" method="post">
+      <input id="task-input" type="text" maxlength='30' />
+      <button id="add-task" class="btn" onClick="addTask()" type="submit">Add Task</button>
+    </form>
+    <p id="task-output"></p>
+  </div>
+</div>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
