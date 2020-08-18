@@ -1,5 +1,5 @@
 # Pomodoro Clock
-### Technologies: HTML, CSS, JavaScript
+### Created: Jun 17, 2020 || Status: Complete || Technologies: HTML, CSS, JavaScript, Babel
 
 **Description:** A productivity timer that separates work and breaks by a default 25 and 5 minutes respectively. Timer length can be increased or decreased.
 
